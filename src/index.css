@@ -1,0 +1,150 @@
+:root {
+    --primary: #1a257e;
+    --p-color: #605d5d;
+    --h-color: #1450a3;
+    --e-color:#dcb14a;
+    --font-color:#212529;
+    --black: #000;
+    --white: #fff;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 1320px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+input:focus {
+    outline: none;
+}
+/* ==================atoms================= */
+.button{
+    padding: 7px 25px;
+    background-color: var(--h-color);
+    color: var(--white);
+    text-transform: capitalize;
+    border: transparent;
+    border-radius: 10px;
+}
+
+/* ========================header===================== */
+header{
+    background-color: var(--primary);
+}
+header .head-logo img {
+    width: 70px;
+}
+header .head-logo h4 {
+    font-size: 18px;
+    color: var(--white);
+}
+header .user button {
+    color: var(--primary);
+    background-color: var(--white);
+    border: transparent;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+/* ====================sidebar==================== */
+.banner{
+    padding-top: 50px;
+}
+.sidebar{
+    height: 100vh;
+    overflow-y: scroll;
+}
+.sidebar h2{
+    font-size: 18px;
+    color: var(--black);
+    margin-bottom: 20px;
+}
+.sidebar ul li{
+    padding: 0px 10px;
+    border-radius:5px;
+    padding: 5px 10px;
+}
+.sidebar ul li a{
+    color: var(--font-color);
+    padding-left: 10px;
+    display: inline-block;
+    text-transform: capitalize;
+}
+.sidebar ul li:hover{
+    background-color: #712cf91a;
+}
+/* =======================table================== */
+.admintable table{
+    border: 1px solid var(--p-color);
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+}
+.admintable table tr{
+    border-bottom: 1px solid var(--p-color);
+}
+.admintable table th{
+    background-color:var(--h-color);
+    color: var(--white);
+    text-transform: capitalize;
+    border: none;
+}   
+.admintable table img{
+    width: 70px;
+}
+.admintable table td button{
+    background-color: transparent;
+    color: var(--h-color);
+    font-size: 18px;
+    margin-right: 10px;
+    border: transparent;
+}
+.voter .form-control{
+    padding: 3px;
+}
+.election tbody td,th{
+    padding-left: 20px;
+}
+.collection-card form .form-data{
+    padding: 30px;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+}
+.collection-card form .form-data h2{
+    font-size: 17px;
+    color: var(--font-color);
+    font-weight: 600;
+    padding: 8px 10px;
+    /* background-color: var(--h-color); */
+    border-bottom: 1px solid #dee2e6;
+    border-radius: 5px;
+}
+
+
+
+
+
+
