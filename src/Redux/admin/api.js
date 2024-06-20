@@ -1,5 +1,5 @@
 import { add_data, delete_data, get_data } from "../api/Api"
-import { DELETE_ELECTION, DELETE_PARTY, DELETE_VOTER, GET_ELECTION, GET_PARTY, GET_VOTER, POST_ELECTION, POST_PARTY, POST_VOTER } from "../constnt"
+import { ADD_ADMIN, DELETE_CONNECTION, DELETE_ELECTION, DELETE_PARTY, DELETE_VOTER, GET_CONNECTION, GET_ELECTION, GET_PARTY, GET_VOTER, POST_CONNECTION, POST_ELECTION, POST_PARTY, POST_VOTER } from "../constnt"
 
 
 
@@ -50,8 +50,28 @@ let add_election = async (action) => {
 }
 
 let delete_election = async (action) => {
-    let {data,status} = await delete_data(DELETE_ELECTION, action.payload)
-    return {data,status}
+    let { data, status } = await delete_data(DELETE_ELECTION, action.payload)
+    return { data, status }
+}
+//collection
+
+let get_connection = async (action) => {
+    let { data, status } = await get_data(GET_CONNECTION)
+    return { data, status }
 }
 
-export { get_party, add_party, delete_party, get_voter, add_voter, delete_voter, get_election, add_election,delete_election }
+let post_connection = async (action) => {
+    let { data, status } = await add_data(POST_CONNECTION, action.payload)
+    return { data, status }
+}
+
+let delete_connection = async (action) => {
+    console.log(action, "api");
+    let { data, status } = await delete_data(DELETE_CONNECTION, action.payload)
+    return { data, status }
+}
+
+export {
+    get_party, add_party, delete_party, get_voter, add_voter, delete_voter, get_election, add_election, delete_election,
+    get_connection, post_connection, delete_connection
+}

@@ -6,23 +6,42 @@ import Party from "./Redux/admin/pages/Party";
 import Voter from "./Redux/admin/pages/Voter";
 import Election from "./Redux/admin/pages/Election";
 import Conction from "./Redux/admin/pages/Conction";
-import { useDispatch } from "react-redux";
-import { GET_ELECTION_PENDING, GET_PARTY_PENDING, GET_VOTER_PENDING } from "./Redux/admin/action";
+import { useDispatch, useSelector } from "react-redux";
+import { GET_COLLECTION_PENDING, GET_CONNECTION_PENDING, GET_ELECTION_PENDING, GET_PARTY_PENDING, GET_VOTER_PENDING } from "./Redux/admin/action";
 import { useEffect } from "react";
+import Loginform from "./Redux/component/Loginform";
+import Login from "./Login";
 
 function App() {
 
   let dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch({ type: GET_PARTY_PENDING, })
+    dispatch({ type: GET_PARTY_PENDING })
     dispatch({ type: GET_ELECTION_PENDING })
     dispatch({ type: GET_VOTER_PENDING })
+    dispatch({ type: GET_CONNECTION_PENDING })
   }, [])
 
-  let role = "admin"
 
-  if (role == "admin") {
+  let admin = JSON.parse(localStorage.getItem("admin"))
+  // console.log(admin);
+
+  let role = "admin"
+  // if(!admin){
+
+  // return (
+  //   <>
+  //     <Routes>
+  //       <Route path="/" element={<Login />} />
+  //     </Routes>
+  //     {/* <Loginform/> */}
+  //     {/* <Login/> */}
+  //   </>
+  // )
+  // }
+
+  if (role=="admin") {
 
     return (
       <>

@@ -13,7 +13,7 @@ const Party = () => {
   let dispatch = useDispatch();
 
   //get party
-  
+
 
 
   //add party
@@ -98,7 +98,8 @@ const Party = () => {
                               <td>{val.party_name}</td>
                               <td>{val.short_code}</td>
                               <td><button><i className="fa-regular fa-pen-to-square"></i></button>
-                                <button onClick={() => remove(val._id)}><i className="fa-solid fa-trash"></i></button></td>
+                                <button onClick={() => remove(val._id)}><i className="fa-solid fa-trash"></i></button>
+                              </td>
                             </tr>
                           </React.Fragment>
                         )

@@ -17,6 +17,18 @@ export let GET_ELECTION = "election/list";
 export let POST_ELECTION = "election/create";
 export let DELETE_ELECTION = "election/delete/"
 
+//conction
+
+export let GET_CONNECTION="partylist/list"
+export let POST_CONNECTION="partylist/create";
+export let DELETE_CONNECTION="partylist/delete/"
+
+
+//admin
+export let ADD_ADMIN="admin/create";
+export let LOGIN_ADMIN="login/admin";
+
+
 
 
 
