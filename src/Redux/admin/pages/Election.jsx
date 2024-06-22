@@ -9,10 +9,6 @@ const Election = () => {
   let dispatch = useDispatch();
   let election = useSelector((state) => state.adminReducer)
 
-  //fetch election
-  // useEffect(() => {
-   
-  // }, [])
 
   //add election
   let addelection = () => {

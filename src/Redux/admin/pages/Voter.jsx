@@ -9,11 +9,6 @@ const Voter = () => {
 
   let dispatch = useDispatch();
 
-  //get voter
-  // useEffect(() => {
-    
-  // }, [])
-
   //post voter
   let handle = (e) => {
     setdata({ ...data, [e.target.name]: e.target.value })

@@ -28,6 +28,15 @@ export let DELETE_CONNECTION="partylist/delete/"
 export let ADD_ADMIN="admin/create";
 export let LOGIN_ADMIN="login/admin";
 
+//user
+export let USER_LOGIN="login/user";
+
+
+//vote
+
+export let GET_VOTE="vote/list";
+export let ADD_VOTE="vote/create";
+export let DELETE_VOTE="vote/delete/";
 
 
 

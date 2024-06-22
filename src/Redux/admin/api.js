@@ -2,7 +2,7 @@ import { add_data, delete_data, get_data } from "../api/Api"
 import { ADD_ADMIN, DELETE_CONNECTION, DELETE_ELECTION, DELETE_PARTY, DELETE_VOTER, GET_CONNECTION, GET_ELECTION, GET_PARTY, GET_VOTER, POST_CONNECTION, POST_ELECTION, POST_PARTY, POST_VOTER } from "../constnt"
 
 
-
+//party
 let get_party = async (action) => {
     let { data, status } = await get_data(GET_PARTY)
     return { data, status }
@@ -20,7 +20,7 @@ let delete_party = async (action) => {
     return { data, status }
 }
 
-//get voter
+// voter
 let get_voter = async (action) => {
     let { data, status } = await get_data(GET_VOTER)
     return { data, status }
@@ -53,7 +53,7 @@ let delete_election = async (action) => {
     let { data, status } = await delete_data(DELETE_ELECTION, action.payload)
     return { data, status }
 }
-//collection
+//connection
 
 let get_connection = async (action) => {
     let { data, status } = await get_data(GET_CONNECTION)

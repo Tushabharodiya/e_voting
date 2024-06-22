@@ -1,7 +1,6 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { DELETE_PARTY_PENDING, GET_PARTY_PENDING, POST_PARTY_PENDING } from '../action';
-import { Button } from '../../atoms/Atoms';
+import { DELETE_PARTY_PENDING, POST_PARTY_PENDING } from '../action';
 
 const Party = () => {
 
@@ -11,10 +10,6 @@ const Party = () => {
 
   let party = useSelector((state) => state.adminReducer)
   let dispatch = useDispatch();
-
-  //get party
-
-
 
   //add party
   let addParty = () => {
@@ -32,10 +27,8 @@ const Party = () => {
     dispatch({ type: POST_PARTY_PENDING, payload: formdata })
   }
 
-
   //remove party
   let remove = (party) => {
-    // console.log(party);
     dispatch({ type: DELETE_PARTY_PENDING, payload: party })
   }
 
